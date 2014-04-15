@@ -24,7 +24,7 @@
 // Place any jQuery/helper plugins in here.
 $.fn.videoCarousel = function (options) {
    var imgs = this.find('img'), state = $('#img-carousel');
-   console.log(imgs);
+
    var settings = $.extend({
        prev: '.left',
        next: '.right',
@@ -80,3 +80,6 @@ $.fn.videoCarousel = function (options) {
     
    return this;
 };
+
+
+$('#img-carousel').videoCarousel();
