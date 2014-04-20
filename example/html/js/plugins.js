@@ -77,9 +77,6 @@ $.fn.videoCarousel = function (options) {
         state.attr('data-state','two');
       }
    });
-    
    return this;
 };
 
-
-$('#img-carousel').videoCarousel();
