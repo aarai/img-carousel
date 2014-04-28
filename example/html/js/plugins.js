@@ -116,11 +116,12 @@ $.fn.videoCarousel = function (options) {
           imgs.eq(3).animate({left: settings.left, width: settings.minWidth}).removeClass(settings.centerImgClass);
           state.attr('data-state','four');
         } else {
-          imgs.eq(0).animate({left: settings.left, width: settings.minWidth}).removeClass(settings.centerImgClass);
-          imgs.eq(1).animate({left: settings.center, width: settings.maxWidth}).addClass(settings.centerImgClass);
-          imgs.eq(2).animate({left: settings.right, width: settings.minWidth}).css('z-index','0');
-          imgs.eq(3).animate({left: settings.back, width: settings.minWidth}).css('z-index','-1');
-          state.attr('data-state','one');
+          imgs.eq(0).animate({left: settings.right, width: settings.minWidth}).css('z-index','0');
+          imgs.eq(1).animate({left: settings.back, width: settings.minWidth}).css('z-index','-1');
+          imgs.eq(2).animate({left: settings.left, width: settings.minWidth}).removeClass(settings.centerImgClass);
+          imgs.eq(3).animate({left: settings.center, width: settings.maxWidth}).addClass(settings.centerImgClass);
+          state.attr('data-state','three');
+
         }
         return false;
      });
@@ -140,7 +141,6 @@ $.fn.videoCarousel = function (options) {
           state.attr('data-state','three');
         } else if (state.attr('data-state')==="three") {
           imgs.eq(0).animate({left: settings.back, width: settings.minWidth}).css('z-index','-1');
-          imgs.eq(1).animate({left: settings.left, width: settings.minWidth}).css('z-index','0');
           imgs.eq(2).animate({left: settings.center, width: settings.maxWidth}).addClass(settings.centerImgClass);
           imgs.eq(3).animate({left: settings.right, width: settings.minWidth}).removeClass(settings.centerImgClass);
           state.attr('data-state','four');
